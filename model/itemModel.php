@@ -14,7 +14,11 @@ function getItem($item_id)
 	return $query->fetch();
 }
 
-function getAllItems($item_id) 
+/**
+ *	Get all item from a list by list_id.
+ *	@return array items 
+ */
+function getAllItems($list_id) 
 {
 	$db = openDatabaseConnection();
 

@@ -29,19 +29,19 @@ function getAllLists()
 
 function editList() 
 {
-	$title = isset($_POST['title']) ? $_POST['title'] : null;
+	$list_title = isset($_POST['list_title']) ? $_POST['list_title'] : null;
 	$list_id = isset($_POST['list_id']) ? $_POST['list_id'] : null;
 	
-	if (strlen($title) == 0) {
+	if (strlen($list_title) == 0) {
 		return false;
 	}
 	
 	$db = openDatabaseConnection();
 
-	$sql = "UPDATE lists SET title = :title WHERE list_id = :list_id";
+	$sql = "UPDATE lists SET list_title = :list_title WHERE list_id = :list_id";
 	$query = $db->prepare($sql);
 	$query->execute(array(
-		':title' => $title,
+		':list_title' => $list_title,
 		':list_id' => $list_id));
 
 	$db = null;
@@ -69,18 +69,18 @@ function deleteList($list_id = null)
 
 function createList() 
 {
-	$title = isset($_POST['title']) ? $_POST['title'] : null;
+	$list_title = isset($_POST['list_title']) ? $_POST['list_title'] : null;
 
-	if (strlen($title) == 0) {
+	if (strlen($list_title) == 0) {
 		return false;
 	}
 	
 	$db = openDatabaseConnection();
 
-	$sql = "INSERT INTO lists(title) VALUES (:title)";
+	$sql = "INSERT INTO lists(list_title) VALUES (:list_title)";
 	$query = $db->prepare($sql);
 	$query->execute(array(
-		':title' => $title));
+		':list_title' => $list_title));
 
 	$db = null;
 	
