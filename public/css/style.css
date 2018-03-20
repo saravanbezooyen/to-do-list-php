@@ -1,0 +1,152 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+}
+
+table {
+  text-align: left;
+  line-height: 40px;
+  border-spacing: 0;
+  border: 2px solid #333333;
+  width: 70%;
+  margin: 20px auto;
+  border-radius: .25rem;
+  clear: both;
+}
+
+tr th {
+  background: #333333;
+  color: #fff;
+  border: none;
+}
+
+th:first-child,
+td:first-child {
+  padding: 0 15px 0 20px;
+}
+
+th tr:last-child th {
+  border-bottom: 3px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #eeeeec;
+  cursor: default;
+}
+
+tbody tr:last-child td {
+  border: none;
+}
+
+tbody td {
+  border-bottom: 1px solid #ddd;
+}
+
+td:last-child {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.button {
+  color: #aaa;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.edit:hover {
+  color: #0a79df;
+}
+
+.delete:hover {
+  color: #dc2a2a;
+}
+
+.create {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  text-transform: none;
+}
+
+.create:hover {
+  color: #0a79df;
+}
+
+form {
+    width: 350px;
+    font-size: 16px;
+    background: #fff;
+    padding: 30px 30px 15px 30px;
+    border: 5px solid #333333;
+    margin: auto;
+}
+
+form input,
+form label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #333333;
+}
+
+label {
+    display:block;
+    margin-bottom: 10px;
+}
+
+label p{
+    display: inline-block;
+    width: 150px;
+    margin: 2px;
+}
+
+form input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed #333333;
+    width: 275px;
+    outline: none;
+    padding: 0px 0px 0px 0px;
+    font-style: italic;
+    margin: 2px;
+}
+
+input {
+  border-bottom: 1px dashed #333333;
+}
+
+input[type=submit]{
+    background: #333333;
+    border: none;
+    padding: 8px 10px 8px 10px;
+    border-radius: 5px;
+    color: #fff;
+    margin: 2px;
+}
+
+input[type=submit]:hover{
+background: #333333;
+}
+
+select {
+  border: 1px solid #ccc;
+  font-size: 16px;
+  height: 34px;
+  width: 268px;
+  background-color: #333333;
+  margin: 2px;
+}
+
+footer {
+  text-align: center;
+}
+
+ul li {
+  float: left;
+  box-sizing: border-box;
+  padding: 10px;
+  list-style-type: none;
+  margin: 15px;
+}
+
+a {
+  color: 
+}

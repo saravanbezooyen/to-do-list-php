@@ -4,8 +4,14 @@ require(ROOT . "model/listModel.php");
 
 function index()
 {
+	if (isset($_GET['sort'])) {
+		$sort = $_GET['sort'];
+	} else {
+		$sort = 'DESC';
+	}
+
 	render("list/index", array(
-	'lists' => getAllLists()));
+	'lists' => getAllLists($sort)));
 }
 
 function create()

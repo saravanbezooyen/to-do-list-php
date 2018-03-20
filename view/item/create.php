@@ -4,7 +4,12 @@
 	<label>
 		<p><input type="text" name="item_title" placeholder="Title"></p>
 		<p><input type="text" name="item_status" placeholder="status"></p>
-		<p><input type="text" name="list_id" placeholder="List"></p>
+		<select name="list_id">
+			<?php foreach ($lists as $list) { ?>
+			<option value="<?= $list['list_id'] ?>"><?= $list['list_title'] ?></option>
+			<?php } ?>
+		</select>
+
 
 		<input type="submit" value="Verzenden">
 	</label>
