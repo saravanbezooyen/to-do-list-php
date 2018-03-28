@@ -1,3 +1,13 @@
+<?php 
+
+	if ($direction === 'ASC') {
+		$direction = 'DESC';
+	} else{
+		$direction = 'ASC';
+	}
+	var_dump($direction);
+?>
+
 	<header>
 		<h1>To do Lists</h1>
 	</header>
@@ -10,7 +20,7 @@
 
 	<table>
 		<tr>
-			<th><a href="<?= URL ?>?sort=list_title">Name</a></th>
+			<th><a href="<?= URL ?>?sort=list_title&direction=<?= $direction ?>">Name</a></th>
 			<th>List</th>
 			<th colspan="2">Action</th>
 		</tr>

@@ -13,9 +13,10 @@ function index($list_id)
 
 }
 
-function create()
+function create($list_id)
 {
-	render("item/create");
+	render("item/create", array(
+		'list_id' => $list_id ));
 }
 
 function createSave()

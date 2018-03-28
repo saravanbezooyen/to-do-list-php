@@ -14,15 +14,13 @@ function getList($list_id)
 	return $query->fetch();
 }
 
-function getAllLists($sort) 
+function getAllLists($sort, $direction) 
 {
 	$db = openDatabaseConnection();
 
-	//$sql = "SELECT * FROM lists";
-	$sql = "SELECT * FROM lists ORDER BY :sort"; // asc desc voor sorteren tegen
+	$sql = "SELECT * FROM lists ORDER BY " . $sort . " " . $direction; // asc desc voor sorteren tegen
 	$query = $db->prepare($sql);
-	$query->execute(array(
-		':sort' => $sort));
+	$query->execute();
 
 	$db = null;
 

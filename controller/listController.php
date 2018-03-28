@@ -7,11 +7,18 @@ function index()
 	if (isset($_GET['sort'])) {
 		$sort = $_GET['sort'];
 	} else {
-		$sort = 'DESC';
+		$sort = 'list_title';
 	}
+	if (isset($_GET['direction'])) {
+		$direction = $_GET['direction'];
+	} else {
+		$direction = 'ASC';
 
+	}
+	
 	render("list/index", array(
-	'lists' => getAllLists($sort)));
+	'lists' => getAllLists($sort, $direction),
+	'direction' => $direction));
 }
 
 function create()
