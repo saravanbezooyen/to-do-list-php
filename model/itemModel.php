@@ -22,11 +22,13 @@ function getAllItems($list_id)
 {
 	$db = openDatabaseConnection();
 
-	$sql = "SELECT `items`.*, `lists`.list_title
+	$sql = "SELECT `items`.*, `lists`.list_title 
 			FROM `items`
 			INNER JOIN `lists`
 			ON `items`.list_id = `lists`.list_id
 			WHERE `lists`.list_id = :list_id";
+
+			// where query voor active -> if active etc
 
 	$query = $db->prepare($sql);
 	$query->bindParam(':list_id', $list_id);

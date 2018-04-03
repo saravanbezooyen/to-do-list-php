@@ -6,7 +6,7 @@
 		<ul>
 			<li><a href="<?= URL ?>list">Home</a></li>
 			<li><a href="<?= URL ?>item/create/<?= $list['list_id']; ?>" class="button create">Add item</a></li>
-			<li><button onclick="myAjax()">Active</button></li>
+			<li><button onclick="myAjax()">Active</button></li> // maak hiervan een dropdown
 		</ul>
 	</nav>
 	<table>
