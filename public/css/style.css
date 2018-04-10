@@ -71,69 +71,6 @@ td:last-child {
   color: #0a79df;
 }
 
-form {
-    width: 350px;
-    font-size: 16px;
-    background: #fff;
-    padding: 30px 30px 15px 30px;
-    border: 5px solid #333333;
-    margin: auto;
-}
-
-form input,
-form label {
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
-    color: #333333;
-}
-
-label {
-    display:block;
-    margin-bottom: 10px;
-}
-
-label p{
-    display: inline-block;
-    width: 150px;
-    margin: 2px;
-}
-
-form input {
-    background: transparent;
-    border: none;
-    border-bottom: 1px dashed #333333;
-    width: 275px;
-    outline: none;
-    padding: 0px 0px 0px 0px;
-    font-style: italic;
-    margin: 2px;
-}
-
-input {
-  border-bottom: 1px dashed #333333;
-}
-
-input[type=submit]{
-    background: #333333;
-    border: none;
-    padding: 8px 10px 8px 10px;
-    border-radius: 5px;
-    color: #fff;
-    margin: 2px;
-}
-
-input[type=submit]:hover{
-background: #333333;
-}
-
-select {
-  border: 1px solid #ccc;
-  font-size: 16px;
-  height: 34px;
-  width: 268px;
-  background-color: #333333;
-  margin: 2px;
-}
 
 footer {
   text-align: center;

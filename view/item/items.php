@@ -6,7 +6,13 @@
 		<ul>
 			<li><a href="<?= URL ?>list">Home</a></li>
 			<li><a href="<?= URL ?>item/create/<?= $list['list_id']; ?>" class="button create">Add item</a></li>
-			<li><button onclick="myAjax()">Active</button></li> // maak hiervan een dropdown
+			<form action="/To do list PHP/item/index/3" method="get">
+				<select name="item_status">
+				<option value="0">0</option>			
+				<option value="1">1</option>
+			</select>
+			<input type="submit">
+		</form>
 		</ul>
 	</nav>
 	<table>

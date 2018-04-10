@@ -28,8 +28,6 @@ function getAllItems($list_id)
 			ON `items`.list_id = `lists`.list_id
 			WHERE `lists`.list_id = :list_id";
 
-			// where query voor active -> if active etc
-
 	$query = $db->prepare($sql);
 	$query->bindParam(':list_id', $list_id);
 	$query->execute();
@@ -37,6 +35,29 @@ function getAllItems($list_id)
 	$db = null;
 
 	return $query->fetchAll();
+}
+
+function getAllItemsByStatus ($list_id, $item_status) {
+
+	$db = openDatabaseConnection();
+
+	$sql = "SELECT `items`.*, `lists`.list_title 
+			FROM `items`
+			INNER JOIN `lists`
+			ON `items`.list_id = `lists`.list_id
+			WHERE `lists`.list_id = :list_id  AND `items`.`item_status` = :item_status";
+
+			// where query voor active -> if active etc
+
+	$query = $db->prepare($sql);
+	$query->bindParam(':list_id', $list_id);
+	$query->bindParam(':item_status', $item_status);
+	$query->execute();
+
+	$db = null;
+
+	return $query->fetchAll();
+
 }
 
 function editItem() 

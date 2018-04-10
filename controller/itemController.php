@@ -5,8 +5,10 @@ require(ROOT . "model/listModel.php");
 
 function index($list_id)
 {
+	//$item_status = $_GET['item_status'];
+
 	render("item/items", array(
-		'items' => getAllItems($list_id),
+		'items' => getAllItemsByStatus($list_id, $_GET['item_status']),
 		'list' => getList($list_id)
 	)
 );
